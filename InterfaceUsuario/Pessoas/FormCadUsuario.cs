@@ -107,6 +107,7 @@ namespace InterfaceUsuario.Pessoas
             txtLoginUsuario.Text = string.Empty;
             txtSenhaUsuario.Text = string.Empty;
             txtCodigoTipoUsuario.Text = string.Empty;
+            lblMostraTipoUsuario.Text = string.Empty;
             btnExcluir.Enabled = false;
             oucSituacao.InicializarSituacao(Status.Ativo);
             MascaraCampoCodigo.RetornarMascara(txtBuscaUsuario, new EventArgs());
@@ -127,7 +128,20 @@ namespace InterfaceUsuario.Pessoas
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            if (txtBuscaUsuario.Text.Trim().Equals(string.Empty) || IsNovo)
+                return;
+            if(MessageBox.Show("Deseja Excluir esse Usuário!", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (new UsuarioNG().Excluir(Convert.ToInt32(txtBuscaUsuario.Text.Trim())))
+                {
+                    MessageBox.Show("Usuário excluido com sucesso", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimparCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao Excluir registro, tente novamente", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private bool VerificarCampos()
@@ -164,6 +178,7 @@ namespace InterfaceUsuario.Pessoas
             if (!VerificarCampos())
                 return;
             var oUsuario = new Usuario();
+            var usuarioNG = new UsuarioNG();
             oUsuario.Nome = txtNomeUsuario.Text.Trim();
             oUsuario.Login = txtLoginUsuario.Text.Trim();
             oUsuario.Senha = txtSenhaUsuario.Text.Trim();
@@ -173,12 +188,29 @@ namespace InterfaceUsuario.Pessoas
             //Gravando no banco pela primeira vez
             if (IsNovo)
             {
-
+                if (usuarioNG.Inserir(oUsuario))
+                {
+                    MessageBox.Show("Usuário Cadastrado com sucesso!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimparCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao cadastrar novo usuário!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             //Atualiza o Registro
             else
             {
-
+                oUsuario.Codigo = Convert.ToInt32(txtBuscaUsuario.Text.Trim());
+                if (usuarioNG.Alterar(oUsuario))
+                {
+                    MessageBox.Show("Dados do Usuário alterado com sucesso!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimparCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Ocorreu um erro ao alterar os dados do usuário!", this.Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 

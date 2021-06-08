@@ -59,5 +59,10 @@ namespace InterfaceUsuario
         {
 
         }
+
+        private void mnsCliente_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormCadCliente());
+        }
     }
 }

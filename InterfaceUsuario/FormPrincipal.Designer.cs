@@ -40,6 +40,7 @@ namespace InterfaceUsuario
             this.mnsPessoa = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsUsuCli = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnsUsuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnsCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsRotinas = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsRelatorios = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsSair = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,10 +112,11 @@ namespace InterfaceUsuario
             // mnsUsuCli
             // 
             this.mnsUsuCli.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnsUsuario});
+            this.mnsUsuario,
+            this.mnsCliente});
             this.mnsUsuCli.Name = "mnsUsuCli";
             this.mnsUsuCli.OwnerItem = this.mnsPessoa;
-            this.mnsUsuCli.Size = new System.Drawing.Size(120, 26);
+            this.mnsUsuCli.Size = new System.Drawing.Size(120, 48);
             this.mnsUsuCli.Opening += new System.ComponentModel.CancelEventHandler(this.mnsUsuCli_Opening);
             // 
             // mnsUsuario
@@ -123,6 +125,13 @@ namespace InterfaceUsuario
             this.mnsUsuario.Size = new System.Drawing.Size(119, 22);
             this.mnsUsuario.Text = "Usuários";
             this.mnsUsuario.Click += new System.EventHandler(this.mnsUsuario_Click);
+            // 
+            // mnsCliente
+            // 
+            this.mnsCliente.Name = "mnsCliente";
+            this.mnsCliente.Size = new System.Drawing.Size(119, 22);
+            this.mnsCliente.Text = "Clientes";
+            this.mnsCliente.Click += new System.EventHandler(this.mnsCliente_Click_1);
             // 
             // mnsRotinas
             // 
@@ -184,6 +193,7 @@ namespace InterfaceUsuario
         private System.Windows.Forms.ToolStripMenuItem mnsPessoa;
         private System.Windows.Forms.ContextMenuStrip mnsUsuCli;
         private System.Windows.Forms.ToolStripMenuItem mnsUsuario;
+        private System.Windows.Forms.ToolStripMenuItem mnsCliente;
     }
 }
 
