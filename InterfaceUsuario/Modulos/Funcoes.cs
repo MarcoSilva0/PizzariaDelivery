@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace InterfaceUsuario.Modulos
 {
@@ -20,6 +21,24 @@ namespace InterfaceUsuario.Modulos
         {
             textBox.Focus();
             textBox.Select();
+        }
+
+        public static long? RemoverMascaraNumerico(MaskedTextBox maskedTextBox)
+        {
+            maskedTextBox.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            var str = RemoverEspacosVazios(maskedTextBox.Text);
+            maskedTextBox.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+            if (str.Equals(string.Empty))
+                return null;
+            else
+                return Convert.ToInt64(str);
+
+
+        }
+
+        public static string RemoverEspacosVazios(string str)
+        {
+            return str.Trim().Replace(" ", "");
         }
     }
 }

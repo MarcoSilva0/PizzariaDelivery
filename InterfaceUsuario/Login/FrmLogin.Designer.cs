@@ -172,7 +172,7 @@ namespace InterfaceUsuario.Login
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InterfaceUsuario.Properties.Resources.fundo_login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(319, 595);
+            this.ClientSize = new System.Drawing.Size(326, 599);
             this.ControlBox = false;
             this.Controls.Add(this.cmbUsuarios);
             this.Controls.Add(this.panel1);

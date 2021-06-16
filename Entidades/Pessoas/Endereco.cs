@@ -9,7 +9,7 @@
         public string Complemento { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
-        public bool isEnderecoPadrao { get; set; }
+        public bool IsEnderecoPadrao { get; set; }
 
     }
 }

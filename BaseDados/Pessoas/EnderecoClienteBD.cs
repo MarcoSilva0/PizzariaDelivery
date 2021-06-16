@@ -29,9 +29,9 @@ namespace BaseDados.Pessoas
                         
                         oEndereco.Codigo = Convert.ToInt32(reader["codigo"].ToString());
                         if (oEndereco.Codigo == codEnderecoPadrao)
-                            oEndereco.isEnderecoPadrao = true;
+                            oEndereco.IsEnderecoPadrao = true;
                         else
-                            oEndereco.isEnderecoPadrao = false;
+                            oEndereco.IsEnderecoPadrao = false;
 
                         oEndereco.CodigoCliente = Convert.ToInt32(reader["codigo_cliente"].ToString());
                         

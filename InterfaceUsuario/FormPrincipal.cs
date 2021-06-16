@@ -1,5 +1,6 @@
 ﻿using InterfaceUsuario.Login;
 using InterfaceUsuario.Pessoas;
+using InterfaceUsuario.Produtos;
 using System;
 using System.Windows.Forms;
 
@@ -63,6 +64,16 @@ namespace InterfaceUsuario
         private void mnsCliente_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario(new FormCadCliente());
+        }
+
+        private void Adicionais_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FormCadAdicional());
+        }
+
+        private void Sabores_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmCadSaborPizza());
         }
     }
 }

@@ -68,8 +68,8 @@ namespace InterfaceUsuario.Pessoas
             this.txtNomeCliente.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtNomeCliente.Location = new System.Drawing.Point(194, 27);
             this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.Size = new System.Drawing.Size(667, 23);
-            this.txtNomeCliente.TabIndex = 10;
+            this.txtNomeCliente.Size = new System.Drawing.Size(617, 23);
+            this.txtNomeCliente.TabIndex = 3;
             // 
             // label2
             // 
@@ -86,7 +86,7 @@ namespace InterfaceUsuario.Pessoas
             this.txtCodigo.Location = new System.Drawing.Point(12, 27);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 23);
-            this.txtCodigo.TabIndex = 8;
+            this.txtCodigo.TabIndex = 1;
             this.txtCodigo.Validating += new System.ComponentModel.CancelEventHandler(this.txtCodigo_Validating);
             // 
             // label1
@@ -104,13 +104,13 @@ namespace InterfaceUsuario.Pessoas
             this.btnBuscaCliente.Location = new System.Drawing.Point(118, 26);
             this.btnBuscaCliente.Name = "btnBuscaCliente";
             this.btnBuscaCliente.Size = new System.Drawing.Size(34, 23);
-            this.btnBuscaCliente.TabIndex = 6;
+            this.btnBuscaCliente.TabIndex = 2;
             this.btnBuscaCliente.UseVisualStyleBackColor = true;
             this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 
             // oucSituacao
             // 
-            this.oucSituacao.Location = new System.Drawing.Point(659, 539);
+            this.oucSituacao.Location = new System.Drawing.Point(615, 503);
             this.oucSituacao.Name = "oucSituacao";
             this.oucSituacao.Size = new System.Drawing.Size(199, 69);
             this.oucSituacao.TabIndex = 16;
@@ -121,7 +121,7 @@ namespace InterfaceUsuario.Pessoas
             this.flowLayoutPanel1.Controls.Add(this.btnExcluir);
             this.flowLayoutPanel1.Controls.Add(this.btnConfirmar);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(499, 619);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(452, 576);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(362, 50);
             this.flowLayoutPanel1.TabIndex = 15;
@@ -133,7 +133,7 @@ namespace InterfaceUsuario.Pessoas
             this.btnCancelar.Location = new System.Drawing.Point(254, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 45);
-            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@ namespace InterfaceUsuario.Pessoas
             this.btnExcluir.Location = new System.Drawing.Point(143, 3);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(105, 45);
-            this.btnExcluir.TabIndex = 1;
+            this.btnExcluir.TabIndex = 18;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@ namespace InterfaceUsuario.Pessoas
             this.btnConfirmar.Location = new System.Drawing.Point(32, 3);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(105, 45);
-            this.btnConfirmar.TabIndex = 0;
+            this.btnConfirmar.TabIndex = 17;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConfirmar.UseVisualStyleBackColor = true;
@@ -171,7 +171,8 @@ namespace InterfaceUsuario.Pessoas
             this.txtTelefone.Mask = "(00) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 23);
-            this.txtTelefone.TabIndex = 17;
+            this.txtTelefone.TabIndex = 4;
+            this.txtTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTelefone_MaskInputRejected);
             // 
             // label3
             // 
@@ -197,7 +198,7 @@ namespace InterfaceUsuario.Pessoas
             this.txtCelular.Mask = "(00) 00000-0000";
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(100, 23);
-            this.txtCelular.TabIndex = 19;
+            this.txtCelular.TabIndex = 5;
             // 
             // groupBox1
             // 
@@ -218,7 +219,7 @@ namespace InterfaceUsuario.Pessoas
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(12, 111);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(849, 422);
+            this.groupBox1.Size = new System.Drawing.Size(802, 386);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Endereço";
@@ -227,10 +228,10 @@ namespace InterfaceUsuario.Pessoas
             // 
             this.btnEditarEndereco.Image = global::InterfaceUsuario.Properties.Resources.editar;
             this.btnEditarEndereco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarEndereco.Location = new System.Drawing.Point(135, 373);
+            this.btnEditarEndereco.Location = new System.Drawing.Point(135, 350);
             this.btnEditarEndereco.Name = "btnEditarEndereco";
             this.btnEditarEndereco.Size = new System.Drawing.Size(90, 34);
-            this.btnEditarEndereco.TabIndex = 25;
+            this.btnEditarEndereco.TabIndex = 15;
             this.btnEditarEndereco.Text = "Editar";
             this.btnEditarEndereco.UseVisualStyleBackColor = true;
             this.btnEditarEndereco.Click += new System.EventHandler(this.btnEditarEndereco_Click);
@@ -239,10 +240,10 @@ namespace InterfaceUsuario.Pessoas
             // 
             this.btnRemoverEndereco.Image = global::InterfaceUsuario.Properties.Resources.excluir;
             this.btnRemoverEndereco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoverEndereco.Location = new System.Drawing.Point(18, 373);
+            this.btnRemoverEndereco.Location = new System.Drawing.Point(18, 350);
             this.btnRemoverEndereco.Name = "btnRemoverEndereco";
             this.btnRemoverEndereco.Size = new System.Drawing.Size(90, 34);
-            this.btnRemoverEndereco.TabIndex = 24;
+            this.btnRemoverEndereco.TabIndex = 14;
             this.btnRemoverEndereco.Text = "Remover";
             this.btnRemoverEndereco.UseVisualStyleBackColor = true;
             this.btnRemoverEndereco.Click += new System.EventHandler(this.btnRemoverEndereco_Click);
@@ -254,19 +255,24 @@ namespace InterfaceUsuario.Pessoas
             this.lvlEnderecos.GridLines = true;
             this.lvlEnderecos.HideSelection = false;
             this.lvlEnderecos.Location = new System.Drawing.Point(18, 228);
+            this.lvlEnderecos.MultiSelect = false;
             this.lvlEnderecos.Name = "lvlEnderecos";
-            this.lvlEnderecos.Size = new System.Drawing.Size(812, 139);
-            this.lvlEnderecos.TabIndex = 23;
+            this.lvlEnderecos.Size = new System.Drawing.Size(717, 116);
+            this.lvlEnderecos.TabIndex = 13;
             this.lvlEnderecos.UseCompatibleStateImageBehavior = false;
+            this.lvlEnderecos.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.lvlEnderecos_ItemCheck);
+            this.lvlEnderecos.DoubleClick += new System.EventHandler(this.lvlEnderecos_DoubleClick);
+            this.lvlEnderecos.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvlEnderecos_MouseDown);
+            this.lvlEnderecos.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvlEnderecos_MouseUp);
             // 
             // btnAdicionarEndereco
             // 
             this.btnAdicionarEndereco.Image = global::InterfaceUsuario.Properties.Resources.confirmar;
             this.btnAdicionarEndereco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdicionarEndereco.Location = new System.Drawing.Point(740, 173);
+            this.btnAdicionarEndereco.Location = new System.Drawing.Point(700, 171);
             this.btnAdicionarEndereco.Name = "btnAdicionarEndereco";
             this.btnAdicionarEndereco.Size = new System.Drawing.Size(90, 34);
-            this.btnAdicionarEndereco.TabIndex = 22;
+            this.btnAdicionarEndereco.TabIndex = 12;
             this.btnAdicionarEndereco.Text = "Adicionar";
             this.btnAdicionarEndereco.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdicionarEndereco.UseVisualStyleBackColor = true;
@@ -275,10 +281,10 @@ namespace InterfaceUsuario.Pessoas
             // chkEndereco
             // 
             this.chkEndereco.AutoSize = true;
-            this.chkEndereco.Location = new System.Drawing.Point(620, 182);
+            this.chkEndereco.Location = new System.Drawing.Point(579, 180);
             this.chkEndereco.Name = "chkEndereco";
             this.chkEndereco.Size = new System.Drawing.Size(115, 19);
-            this.chkEndereco.TabIndex = 21;
+            this.chkEndereco.TabIndex = 11;
             this.chkEndereco.Text = "Endereço Padrão";
             this.chkEndereco.UseVisualStyleBackColor = true;
             // 
@@ -287,8 +293,8 @@ namespace InterfaceUsuario.Pessoas
             this.txtCidade.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtCidade.Location = new System.Drawing.Point(318, 180);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(291, 23);
-            this.txtCidade.TabIndex = 20;
+            this.txtCidade.Size = new System.Drawing.Size(255, 23);
+            this.txtCidade.TabIndex = 10;
             // 
             // label9
             // 
@@ -304,8 +310,8 @@ namespace InterfaceUsuario.Pessoas
             this.txtBairro.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBairro.Location = new System.Drawing.Point(18, 180);
             this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(276, 23);
-            this.txtBairro.TabIndex = 18;
+            this.txtBairro.Size = new System.Drawing.Size(240, 23);
+            this.txtBairro.TabIndex = 9;
             // 
             // label8
             // 
@@ -321,8 +327,8 @@ namespace InterfaceUsuario.Pessoas
             this.txtComplemento.BackColor = System.Drawing.SystemColors.Window;
             this.txtComplemento.Location = new System.Drawing.Point(171, 111);
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(659, 23);
-            this.txtComplemento.TabIndex = 16;
+            this.txtComplemento.Size = new System.Drawing.Size(619, 23);
+            this.txtComplemento.TabIndex = 8;
             // 
             // label7
             // 
@@ -339,7 +345,7 @@ namespace InterfaceUsuario.Pessoas
             this.txtNumero.Location = new System.Drawing.Point(18, 111);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(122, 23);
-            this.txtNumero.TabIndex = 14;
+            this.txtNumero.TabIndex = 7;
             // 
             // label6
             // 
@@ -355,8 +361,8 @@ namespace InterfaceUsuario.Pessoas
             this.txtRua.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtRua.Location = new System.Drawing.Point(18, 52);
             this.txtRua.Name = "txtRua";
-            this.txtRua.Size = new System.Drawing.Size(812, 23);
-            this.txtRua.TabIndex = 12;
+            this.txtRua.Size = new System.Drawing.Size(772, 23);
+            this.txtRua.TabIndex = 6;
             // 
             // label5
             // 
@@ -371,7 +377,7 @@ namespace InterfaceUsuario.Pessoas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 681);
+            this.ClientSize = new System.Drawing.Size(826, 638);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCelular);
