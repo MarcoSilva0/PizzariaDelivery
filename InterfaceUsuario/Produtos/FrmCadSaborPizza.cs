@@ -119,7 +119,7 @@ namespace InterfaceUsuario.Produtos
                 return;
             }
 
-            var oSaborPizza = new AdicionalNG().Buscar(Convert.ToInt32(txtCodigo.Text.Trim()));
+            var oSaborPizza = new SaborPizzaNG().Buscar(Convert.ToInt32(txtCodigo.Text.Trim()));
             if (oSaborPizza == null)
             {
                 btnExcluir.Enabled = false;
@@ -129,7 +129,7 @@ namespace InterfaceUsuario.Produtos
             IsNovo = false;
             txtDescricao.Text = oSaborPizza.Descricao;
             txtObservacao.Text = oSaborPizza.Observacao;
-            txtValorAdicional.Text = oSaborPizza.Valor.ToString();
+            txtValorAdicional.Text = oSaborPizza.ValorAdicional.ToString();
             MascaraCampoCodigo.RetornarMascara(txtCodigo, new EventArgs());
             MascaraDinheiro.RetornarMascara(txtValorAdicional, new EventArgs());
 
